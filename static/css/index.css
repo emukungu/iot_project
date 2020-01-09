@@ -1,0 +1,10 @@
+.form-display{
+  padding: 30px;
+  outline: none;
+}
+
+#graphs{        
+  border: 1px solid lightgray;  
+  width: 600px;
+  margin: 20px;  
+}

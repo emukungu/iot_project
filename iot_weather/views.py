@@ -16,6 +16,6 @@ class SensorData(View):
       response_data = response.read()
       data = json.loads(response_data.decode("utf-8"))
 
-      return render(request, 'sensor_data/sensor_data.html', {"context": data})
+      return render(request, 'weather_data/sensor_data.html', {"context": data})
     except:
-      return render(request, 'sensor_data/page_404.html')
+      return render(request, 'weather_data/page_404.html')
