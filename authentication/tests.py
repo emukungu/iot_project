@@ -19,7 +19,7 @@ class UserTest(TestCase):
 
   def test_successful_signup(self):
     self.assertEqual(self.response.status_code, 302)
-    self.assertTrue(self.response.url.startswith('/sensor_data/'))
+    self.assertTrue(self.response.url.startswith('/iot/'))
 
   def test_failed_signup(self):
     response = self.client.post('/auth/signup/', 
@@ -31,7 +31,7 @@ class UserTest(TestCase):
 
   def test_succesful_login(self):
     self.assertEqual(self.login_response.status_code, 302)
-    self.assertTrue(self.login_response.url.startswith('/sensor_data/'))
+    self.assertTrue(self.login_response.url.startswith('/iot/'))
 
   def test_failed_login(self):
     res = self.client.post('/auth/login/', 
